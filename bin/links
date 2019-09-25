@@ -1,2 +1,3 @@
-#! /bin/bash 
-node --http-parser=legacy index.js $@
+#! /bin/bash
+
+node --http-parser=legacy $(npm root -g)/links/index.js $@

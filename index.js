@@ -59,4 +59,10 @@ process.on("SIGINT", function() {
   process.exit(1);
 });
 
-main(process.argv[2]);
+const [, , args] = process.argv;
+
+if (require.main === module) {
+  main(args);
+} else {
+  module.exports = main;
+}
